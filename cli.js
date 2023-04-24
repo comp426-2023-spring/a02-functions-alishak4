@@ -31,13 +31,21 @@ if(args.n){
 else if(args.s){
   latitude = parseFloat(args.s) * -1;
 }
+else{
+  console.log("Latitude must be in range");
+  process.exit(0);
+}
 
 var longitude = 0;
 if(args.e){
   longitude = parseFloat(args.e);
 }
 else if(args.w){
-  latitude = parseFloat(args.w) * -1;
+  longitude = parseFloat(args.w) * -1;
+}
+else{
+  console.log("Longitude must be in range");
+  process.exit(0);
 }
 
 
